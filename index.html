@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20%;
+        }
+
+        #clock{
+            width: 1700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .number{
+            display: flex;
+            flex-direction: row;
+            width: 150px;
+            height: 250px;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 250px;
+        }
+
+        .area{
+            height: 50px;
+            width: 50px;
+            background-color: black;
+        }
+
+        #hours, #minutes, #seconds{
+            width: 350px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .dot{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <section id="clock">
+        <section id="hours">
+            <section id="hours-first">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p1-a1"></section>
+                        <section class="area" id="p1-a2"></section>
+                        <section class="area" id="p1-a3"></section>
+                        <section class="area" id="p1-a4"></section>
+                        <section class="area" id="p1-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p1-a6"></section>
+                        <section class="area" id="p1-a7"></section>
+                        <section class="area" id="p1-a8"></section>
+                        <section class="area" id="p1-a9"></section>
+                        <section class="area" id="p1-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p1-a11"></section>
+                        <section class="area" id="p1-a12"></section>
+                        <section class="area" id="p1-a13"></section>
+                        <section class="area" id="p1-a14"></section>
+                        <section class="area" id="p1-a15"></section>
+                    </section>
+                </section>
+            </section>
+            <section id="hours-second">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p2-a1"></section>
+                        <section class="area" id="p2-a2"></section>
+                        <section class="area" id="p2-a3"></section>
+                        <section class="area" id="p2-a4"></section>
+                        <section class="area" id="p2-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p2-a6"></section>
+                        <section class="area" id="p2-a7"></section>
+                        <section class="area" id="p2-a8"></section>
+                        <section class="area" id="p2-a9"></section>
+                        <section class="area" id="p2-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p2-a11"></section>
+                        <section class="area" id="p2-a12"></section>
+                        <section class="area" id="p2-a13"></section>
+                        <section class="area" id="p2-a14"></section>
+                        <section class="area" id="p2-a15"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="column">
+            <section class="area dot"></section>
+            <section class="area"></section>
+            <section class="area dot"></section>
+            <section class="area"></section>
+            <section class="area dot"></section>
+        </section>
+        <section id="minutes">
+            <section id="minutes-first">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p3-a1"></section>
+                        <section class="area" id="p3-a2"></section>
+                        <section class="area" id="p3-a3"></section>
+                        <section class="area" id="p3-a4"></section>
+                        <section class="area" id="p3-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p3-a6"></section>
+                        <section class="area" id="p3-a7"></section>
+                        <section class="area" id="p3-a8"></section>
+                        <section class="area" id="p3-a9"></section>
+                        <section class="area" id="p3-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p3-a11"></section>
+                        <section class="area" id="p3-a12"></section>
+                        <section class="area" id="p3-a13"></section>
+                        <section class="area" id="p3-a14"></section>
+                        <section class="area" id="p3-a15"></section>
+                    </section>
+                </section>
+            </section>
+            <section id="minutes-second">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p4-a1"></section>
+                        <section class="area" id="p4-a2"></section>
+                        <section class="area" id="p4-a3"></section>
+                        <section class="area" id="p4-a4"></section>
+                        <section class="area" id="p4-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p4-a6"></section>
+                        <section class="area" id="p4-a7"></section>
+                        <section class="area" id="p4-a8"></section>
+                        <section class="area" id="p4-a9"></section>
+                        <section class="area" id="p4-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p4-a11"></section>
+                        <section class="area" id="p4-a12"></section>
+                        <section class="area" id="p4-a13"></section>
+                        <section class="area" id="p4-a14"></section>
+                        <section class="area" id="p4-a15"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="column">
+            <section class="area dot"></section>
+            <section class="area"></section>
+            <section class="area dot"></section>
+            <section class="area"></section>
+            <section class="area dot"></section>
+        </section>
+        <section id="seconds">
+            <section id="seconds-first">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p5-a1"></section>
+                        <section class="area" id="p5-a2"></section>
+                        <section class="area" id="p5-a3"></section>
+                        <section class="area" id="p5-a4"></section>
+                        <section class="area" id="p5-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p5-a6"></section>
+                        <section class="area" id="p5-a7"></section>
+                        <section class="area" id="p5-a8"></section>
+                        <section class="area" id="p5-a9"></section>
+                        <section class="area" id="p5-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p5-a11"></section>
+                        <section class="area" id="p5-a12"></section>
+                        <section class="area" id="p5-a13"></section>
+                        <section class="area" id="p5-a14"></section>
+                        <section class="area" id="p5-a15"></section>
+                    </section>
+                </section>
+            </section>
+            <section id="seconds-second">
+                <section class="number">
+                    <section class="column">
+                        <section class="area" id="p6-a1"></section>
+                        <section class="area" id="p6-a2"></section>
+                        <section class="area" id="p6-a3"></section>
+                        <section class="area" id="p6-a4"></section>
+                        <section class="area" id="p6-a5"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p6-a6"></section>
+                        <section class="area" id="p6-a7"></section>
+                        <section class="area" id="p6-a8"></section>
+                        <section class="area" id="p6-a9"></section>
+                        <section class="area" id="p6-a10"></section>
+                    </section>
+                    <section class="column">
+                        <section class="area" id="p6-a11"></section>
+                        <section class="area" id="p6-a12"></section>
+                        <section class="area" id="p6-a13"></section>
+                        <section class="area" id="p6-a14"></section>
+                        <section class="area" id="p6-a15"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <script>
+        window.onload = clock();
+
+        function zero(p){
+            for(let i = 7; i < 10; i++){
+                document.getElementById('p' + p + '-a' + i).style.backgroundColor = 'white';
+            }
+        }
+
+        function one(p){
+            for(let i = 1; i < 11; i++){
+                document.getElementById('p' + p + '-a' + i).style.backgroundColor = 'white';
+            }
+        }
+
+        function two(p){
+            document.getElementById('p' + p + '-a2').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a14').style.backgroundColor = 'white';
+        }
+
+        function three(p){
+            document.getElementById('p' + p + '-a2').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a4').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+        }
+
+        function four(p){
+            for(let i = 4; i < 11; i++){
+                if(i != 8){
+                    document.getElementById('p' + p + '-a' + i).style.backgroundColor = 'white';
+                }
+            }
+        }
+
+        function five(p){
+            document.getElementById('p' + p + '-a4').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a12').style.backgroundColor = 'white';
+        }
+
+        function six(p){
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a12').style.backgroundColor = 'white';
+        }
+
+        function seven(p){
+            for(let i = 1; i < 11; i++){
+                if(i != 1 && i != 6){
+                    document.getElementById('p' + p + '-a' + i).style.backgroundColor = 'white';
+                }
+            }
+        }
+
+        function eight(p){
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+        }
+
+        function nine(p){
+            document.getElementById('p' + p + '-a4').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a7').style.backgroundColor = 'white';
+            document.getElementById('p' + p + '-a9').style.backgroundColor = 'white';
+        }
+
+        function clock(){
+            for(let i = 1; i < 7; i++){
+                for(let j = 1; j < 16; j++){
+                    document.getElementById('p' + i + '-a' + j).style.backgroundColor = 'black';
+                }
+            }
+            let time = new Date;
+            let hour = time.getHours();
+            let minute = time.getMinutes();
+            let second = time.getSeconds();
+            let strhour = hour.toString();
+            let strminute = minute.toString();
+            let strsecond = second.toString();
+
+            if(hour >= 10){
+                switch(strhour[0]){
+                case '0':
+                    zero(1);
+                break;
+                case '1':
+                    one(1);
+                break;
+                case '2':
+                    two(1);
+                break;
+                case '3':
+                    three(1);
+                break;
+                case '4':
+                    four(1);
+                break;
+                case '5':
+                    five(1);
+                break;
+                case '6':
+                    six(1);
+                break;
+                case '7':
+                    seven(1);
+                break;
+                case '8':
+                    eight(1);
+                break;
+                case '9':
+                    nine(1);
+                break;
+                }
+
+                switch(strhour[1]){
+                case '0':
+                    zero(2);
+                break;
+                case '1':
+                    one(2);
+                break;
+                case '2':
+                    two(2);
+                break;
+                case '3':
+                    three(2);
+                break;
+                case '4':
+                    four(2);
+                break;
+                case '5':
+                    five(2);
+                break;
+                case '6':
+                    six(2);
+                break;
+                case '7':
+                    seven(2);
+                break;
+                case '8':
+                    eight(2);
+                break;
+                case '9':
+                    nine(2);
+                break;
+            }
+            }else{
+                zero(1);
+                switch(strhour[0]){
+                case '0':
+                    zero(2);
+                break;
+                case '1':
+                    one(2);
+                break;
+                case '2':
+                    two(2);
+                break;
+                case '3':
+                    three(2);
+                break;
+                case '4':
+                    four(2);
+                break;
+                case '5':
+                    five(2);
+                break;
+                case '6':
+                    six(2);
+                break;
+                case '7':
+                    seven(2);
+                break;
+                case '8':
+                    eight(2);
+                break;
+                case '9':
+                    nine(2);
+                break;
+                }
+            }
+
+            if(minute >= 10){
+                switch(strminute[0]){
+                case '0':
+                    zero(3);
+                break;
+                case '1':
+                    one(3);
+                break;
+                case '2':
+                    two(3);
+                break;
+                case '3':
+                    three(3);
+                break;
+                case '4':
+                    four(3);
+                break;
+                case '5':
+                    five(3);
+                break;
+                case '6':
+                    six(3);
+                break;
+                }
+
+                switch(strminute[1]){
+                case '0':
+                    zero(4);
+                break;
+                case '1':
+                    one(4);
+                break;
+                case '2':
+                    two(4);
+                break;
+                case '3':
+                    three(4);
+                break;
+                case '4':
+                    four(4);
+                break;
+                case '5':
+                    five(4);
+                break;
+                case '6':
+                    six(4);
+                break;
+                case '7':
+                    seven(4);
+                break;
+                case '8':
+                    eight(4);
+                break;
+                case '9':
+                    nine(4);
+                break;
+            }
+            }else{
+                zero(3);
+                switch(strminute[0]){
+                case '0':
+                    zero(4);
+                break;
+                case '1':
+                    one(4);
+                break;
+                case '2':
+                    two(4);
+                break;
+                case '3':
+                    three(4);
+                break;
+                case '4':
+                    four(4);
+                break;
+                case '5':
+                    five(4);
+                break;
+                case '6':
+                    six(4);
+                break;
+                case '7':
+                    seven(4);
+                break;
+                case '8':
+                    eight(4);
+                break;
+                case '9':
+                    nine(4);
+                break;
+                }
+            }
+
+            if(second >= 10){
+                switch(strsecond[0]){
+                case '0':
+                    zero(5);
+                break;
+                case '1':
+                    one(5);
+                break;
+                case '2':
+                    two(5);
+                break;
+                case '3':
+                    three(5);
+                break;
+                case '4':
+                    four(5);
+                break;
+                case '5':
+                    five(5);
+                break;
+                case '6':
+                    six(5);
+                break;
+                }
+
+                switch(strsecond[1]){
+                case '0':
+                    zero(6);
+                break;
+                case '1':
+                    one(6);
+                break;
+                case '2':
+                    two(6);
+                break;
+                case '3':
+                    three(6);
+                break;
+                case '4':
+                    four(6);
+                break;
+                case '5':
+                    five(6);
+                break;
+                case '6':
+                    six(6);
+                break;
+                case '7':
+                    seven(6);
+                break;
+                case '8':
+                    eight(6);
+                break;
+                case '9':
+                    nine(6);
+                break;
+            }
+            }else{
+                zero(5);
+                switch(strsecond[0]){
+                case '0':
+                    zero(6);
+                break;
+                case '1':
+                    one(6);
+                break;
+                case '2':
+                    two(6);
+                break;
+                case '3':
+                    three(6);
+                break;
+                case '4':
+                    four(6);
+                break;
+                case '5':
+                    five(6);
+                break;
+                case '6':
+                    six(6);
+                break;
+                case '7':
+                    seven(6);
+                break;
+                case '8':
+                    eight(6);
+                break;
+                case '9':
+                    nine(6);
+                break;
+                }
+            }
+        }
+
+        setInterval(clock, 1000)
+    </script>
+</body>
+</html>
